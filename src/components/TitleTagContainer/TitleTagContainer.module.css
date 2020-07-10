@@ -3,9 +3,19 @@
 }
 
 .title {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: bold;
   padding-bottom: 0.2rem;
+}
+
+.titleLink {
+  color: #222;
+  text-decoration: none;
+}
+
+.titleLink:hover {
+  text-decoration: underline;
+  color: #3b49df;
 }
 
 .tagContainer {

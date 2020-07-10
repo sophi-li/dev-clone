@@ -1,13 +1,25 @@
-import React from "react";
+import React from 'react'
 
-import styles from "./TitleTagContainer.module.css";
+import styles from './TitleTagContainer.module.css'
 
 const TitleTagContainer = ({ timeTag }) => {
+  const {
+    url,
+    title,
+    tag_list,
+    positive_reactions_count,
+    comments_count,
+  } = timeTag
+
   return (
     <div className={styles.container}>
-      <div className={styles.title}>{timeTag.title}</div>
+      <div className={styles.title}>
+        <a className={styles.titleLink} href={url}>
+          {title}
+        </a>
+      </div>
       <div className={styles.tagContainer}>
-        {timeTag.tag_list.map((elem) => (
+        {tag_list.map((elem) => (
           <div className={styles.tag}>
             <span className={styles.pound}>#</span>
             {elem}
@@ -16,12 +28,12 @@ const TitleTagContainer = ({ timeTag }) => {
       </div>
       <div className={styles.reactionContainer}>
         <div className={styles.reactions}>
-          {timeTag.positive_reactions_count} reactions
+          {positive_reactions_count} reactions
         </div>
-        <div className={styles.comments}>{timeTag.comments_count} comments</div>
+        <div className={styles.comments}>{comments_count} comments</div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default TitleTagContainer;
+export default TitleTagContainer
