@@ -1,0 +1,53 @@
+.container {
+  padding: 0.1rem 1rem;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  margin: 0.4rem 0.5rem 0.3rem 1rem;
+}
+.logo {
+  width: 35px;
+  margin-right: 1rem;
+}
+
+.form {
+  /* width: 80%; */
+  flex: 2;
+  /* margin: 0.5rem 5rem 0rem 1rem; */
+}
+
+.input {
+  background-color: #f9fafa;
+  border: 1px solid #b4bdc5;
+  border-radius: 6px;
+  width: 90%;
+  margin: 0 auto;
+  font-size: 1rem;
+  padding: 0.6rem 0.4rem;
+}
+
+.postBtn {
+  margin: 0 0.5rem 0 1rem;
+  padding: 0 0.3rem;
+  background-color: #3b49df;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.postBtn:hover {
+  cursor: pointer;
+}
+
+/* Desktop Responsiveness */
+@media only screen and (min-width: 760px) {
+  .logo {
+    margin-right: 3rem;
+  }
+
+  .postBtn {
+    flex: 0.3;
+  }
+}

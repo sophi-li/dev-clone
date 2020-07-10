@@ -1,0 +1,26 @@
+.container {
+  padding: 1rem 1rem 0 1rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.profileImage {
+  width: 3rem;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.nameTimeContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 0.4rem;
+}
+
+.name {
+  font-weight: bold;
+}
+
+.time {
+  font-size: 0.9rem;
+}
