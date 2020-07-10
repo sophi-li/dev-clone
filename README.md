@@ -8,7 +8,7 @@
 
 > DEV Clone that pulls and displays data from the [DEV API](https://docs.dev.to/api/). Built with React.
 
-Live site:
+Live site: https://dev-clone.netlify.app/
 
 ## Install
 
