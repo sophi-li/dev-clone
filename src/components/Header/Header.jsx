@@ -1,31 +1,31 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react'
 
-import Articles from "../Articles";
-import devLogo from "./dev-logo.svg";
+import Articles from '../Articles'
+import devLogo from './dev-logo.svg'
 
-import styles from "./Header.module.css";
+import styles from './Header.module.css'
 
 const Header = () => {
-  const [input, setInput] = useState("react");
-  const [topic, setTopic] = useState(input);
+  const [input, setInput] = useState('react')
+  const [topic, setTopic] = useState(input)
 
-  const [articles, setArticles] = useState([]);
+  const [articles, setArticles] = useState([])
 
   useEffect(() => {
     fetch(`https://dev.to/api/articles?tag=${topic}`)
       .then((res) => res.json())
       .then((json) => setArticles(json))
-      .catch((error) => console.log(error));
-  }, [topic, setTopic]);
+      .catch((error) => console.log(error))
+  }, [topic, setTopic])
 
   function handleSubmit(e) {
-    e.preventDefault();
-    setTopic(input);
+    e.preventDefault()
+    setTopic(input)
   }
   function handleChange(e) {
-    setInput(e.target.value);
+    setInput(e.target.value)
   }
-  console.log(topic);
+  console.log(topic)
 
   return (
     <div>
@@ -44,11 +44,12 @@ const Header = () => {
 
         <button className={styles.postBtn}>Write a post</button>
       </div>
+
       {articles.map((element) => (
         <Articles key={element.id} articles={element} />
       ))}
     </div>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header
