@@ -1,13 +1,11 @@
-import React from "react";
+import React from 'react'
 
-import moment from "moment";
-
-import styles from "./UserTimeContainer.module.css";
+import styles from './UserTimeContainer.module.css'
 
 const UserTimeContainer = ({ userTime }) => {
-  const { user, created_at } = userTime;
+  const { user, created_at } = userTime
 
-  let time = created_at.substring(0, 10);
+  let time = created_at.substring(0, 10)
 
   return (
     <div className={styles.container}>
@@ -23,7 +21,7 @@ const UserTimeContainer = ({ userTime }) => {
         <div className={styles.time}>{time}</div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default UserTimeContainer;
+export default UserTimeContainer
